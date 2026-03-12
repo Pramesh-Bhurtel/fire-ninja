@@ -1,106 +1,107 @@
-# Fire-Ninja
+# 🔥 Fire Ninja | Maka Bosada Aag
 
-A modern, high‑performance web application that showcases dynamic visual effects and interactive gameplay. This repository contains the source code, assets, and documentation needed to run, develop, and contribute to the project.
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
+**Fire Ninja** is an intense, high-speed arcade slash game built with vanilla JavaScript. Slice through waves of fireballs, collect powerful orbs, and climb the ranks to become the ultimate master of flame: **Maka Bosada Aag**.
 
 ---
 
-## Overview
+## 🎮 Game Overview
 
-**Fire‑Ninja** is a lightweight JavaScript/HTML5 game that demonstrates smooth animations, particle effects, and responsive controls. It is built with vanilla JavaScript and CSS, making it easy to understand and extend.
+In Fire Ninja, your mission is simple: **Slice everything except the bombs.** As you progress, you'll earn Power (currency), gain XP to level up, and unlock devastating skills to clear the screen.
 
----
-
-## Features
-
-- **Dynamic particle system** with customizable fire effects.
-- **Responsive controls** for keyboard and touch devices.
-- **Modular architecture** – core game logic, rendering, and UI are separated for easy maintenance.
-- **Responsive design** – works on desktop and mobile browsers.
-- **Open‑source** – contributions are welcome!
+### ⚔️ The Mission
+- **Slice Fireballs & Stars:** Grow your Power and increase your score.
+- **Reach the Top Rank:** Advance from a mere *Spark* to the legendary *Maka Bosada Aag*.
+- **Avoid Bombs:** One wrong slice resets your session progress to zero. Only your **High Score** is eternal.
 
 ---
 
-## Installation
+## 🚀 Features
 
-1. **Clone the repository**
+- **Dynamic Combo System:** Chain hits to multiply your points. Reach a 15x combo to unleash the **Fire Ultimate**!
+- **Progression & Ranks:** Level up by gaining XP. Advance through 5 distinct ranks:
+  - ✨ Spark
+  - 🔥 Ember
+  - ☄️ Blaze
+  - 🌋 Inferno
+  - 👑 **Maka Bosada Aag**
+- **In-Game Shop:** Use your earned Power to buy passive upgrades and active skills.
+- **Persistence:** Your level, high score, and upgrades are saved automatically to `localStorage`.
+- **Visual Excellence:** Realistic fire textures (SVG filters), particle explosions, and screen-shake effects.
+
+---
+
+## ⌨️ Controls
+
+| Action | Control |
+| :--- | :--- |
+| **Slash** | Mouse Click & Drag / Touch |
+| **Pause & Shop** | `Space` |
+| **Fire Nova** | `A` (Level 1+) |
+| **Time Freeze** | `S` (Level 5+) |
+| **Meteor Shower** | `D` (Level 10+) |
+| **Spirit Blade** | `W` (Level 15+) |
+
+---
+
+## 🔮 Mechanics
+
+### Target Types
+- **Normal Fireball:** The bread and butter. Provides base points.
+- **Golden Star:** Rare and fast. Provides **5x** points of a normal fireball.
+- **Bomb:** 💣 **FATAL ERROR.** Slicing a bomb ends your run unless you have a shield.
+- **Power-up Orbs:**
+  - 🔥 **Fire Boost:** 5x Power gain for 10 seconds.
+  - ⏳ **Slow Motion:** Freezes time for 5 seconds.
+  - 🛡️ **Shield:** Protects you from one bomb hit.
+  - 💥 **Score Burst:** Instant massive XP/Power gain.
+
+### Active Skills
+- **Fire Nova:** Obliterates all non-bomb targets on screen instantly.
+- **Time Freeze:** Stops all targets in their tracks for 5 seconds.
+- **Meteor Shower:** Spawns a rapid wave of 10 targets (no bombs!).
+- **Spirit Blade:** Automatically slashes targets as they fall for 5 seconds.
+
+---
+
+## 🛠️ Technical Structure
+
+The project is organized into modular JavaScript files for better maintainability:
+
+- **`index.html`**: The core layout, HUD, and SVG filters.
+- **`css/style.css`**: Premium styling, animations, and "Maka Bosada" visual modes.
+- **`js/game.js`**: Core state management, progression system, and save/load logic.
+- **`js/physics.js`**: The arcade engine handling spawns, gravity, and collision/hit detection.
+- **`js/skills.js`**: Logic for all active special abilities.
+- **`js/effects.js`**: Handles particles, floating text, and visual feedback.
+- **`js/audio.js`**: Adaptive sound engine with pitch-shifting based on combo.
+
+---
+
+## 📦 Installation & Usage
+
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/pramesh-bhurtel/Fire-Ninja.git
-   cd Fire-Ninja
+   git clone https://github.com/Pramesh-Bhurtel/Fire-Ninja.git
    ```
-2. **Open the project**
-   Simply open `index.html` in a modern browser (Chrome, Firefox, Edge, Safari). No additional dependencies or build steps are required.
+2. **Launch:**
+   Open `index.html` in any modern web browser. 
 
-> **Note**: If you prefer a local development server, you can run:
-> ```bash
-> npx -y http-server ./
-> ```
-> and navigate to `http://localhost:8080`.
+> [!TIP]
+> For the best experience, use a local server:
+> `npx http-server ./`
 
 ---
 
-## Usage
+## 🤝 Contributing
 
-- Open `index.html` in your browser.
-- Use the **arrow keys** (or WASD) to move the ninja.
-- Press **Space** to trigger the fire attack.
-- Touch controls are automatically enabled on mobile devices.
-
-For advanced configuration, see the **Configuration** section below.
-
----
-
-## Configuration
-
-The game can be customized via the `js/config.js` file (create this file if it does not exist). Example settings:
-
-```javascript
-window.GameConfig = {
-  fireColor: "#ff4500",
-  particleCount: 150,
-  ninjaSpeed: 5,
-  // Add more custom settings here
-};
-```
-
-Modify these values and reload the page to see changes instantly.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## Contributing
+## 📜 License
 
-Contributions are highly encouraged! Follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug‑fix:
-   ```bash
-   git checkout -b feature/awesome-feature
-   ```
-3. Make your changes and ensure the project still runs.
-4. Commit your work with clear messages.
-5. Open a Pull Request describing the changes.
-
-Please adhere to the existing code style and include comments where appropriate.
-
----
-
-## License
-
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
----
-
-## Contact
-
-For questions or suggestions, feel free to open an issue or contact the maintainer at `contact@prameshbhurtel.com.np`.
+Distributed under the MIT License. See `LICENSE` for more information.
